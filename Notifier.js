@@ -13,8 +13,6 @@ class Notifier {
 
         let receivers = await this.receiverStratagy.getReceivers()
 
-        
-
         receivers.forEach(receiver => {
 
             var productList = "";
@@ -23,7 +21,7 @@ class Notifier {
                 productList += "- " + product.selectedQuantity + " " + product.productName + "<br>"
             })
 
-            const message = `Hello ${receiver.name},<br>Its been ${receiver.daysSinceEndDate} since your return date, please contact the positive warehouse administration and return the products as soon as possible!<br>Your order: <br>${productList}<br>Thank you.`
+            const message = `Hello ${receiver.name},<br>Its been ${receiver.daysSinceEndDate} days since your return date, please contact the positive warehouse administration and return the products as soon as possible!<br>Your order: <br>${productList}<br>Thank you.`
 
 
             this.stratagy.SendEmail(receiver.mail, receiver.name, "natanprotector@outlook.com", "Positive Warehouse", message, "Notification")
