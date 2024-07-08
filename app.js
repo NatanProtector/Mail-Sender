@@ -18,5 +18,9 @@ app.get(secret_url, (req,res) => {
 
 });
 
+app.get('/wakeUp', (req,res) => {
+    console.log('Waking up')
+});
+
 
 app.listen(3000, () => console.log("Server running on port 3000"));
