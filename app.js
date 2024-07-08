@@ -6,8 +6,6 @@ const secret_url = process.env.SECRET_URL;
 
 const app = express();
 
-console.log(new Date());
-
 app.get(secret_url, (req,res) => {
 
     handler();
@@ -23,4 +21,15 @@ app.get('/wakeUp', (req,res) => {
 });
 
 
+function printTest() {
+    // Print immediately the first time the function is activated
+    console.log('testing timer');
+  
+}
+
+
+setInterval(printTest, 86400000);
+
 app.listen(3000, () => console.log("Server running on port 3000"));
+
+
