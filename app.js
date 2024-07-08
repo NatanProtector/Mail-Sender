@@ -9,6 +9,8 @@ const app = express();
 app.get(secret_url, (req,res) => {
 
     handler();
+
+    console.log('Mail sent successfully');
     
     res.status(200).send("Mail sent");
 

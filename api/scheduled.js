@@ -11,10 +11,10 @@ const Notifier = require("../Notifier.js");
 
 const notifier = new Notifier(senderStratagy, receiverStratagy);
 
-module.exports = async function handler() {
+export default async function handler() {
     // Your scheduled task logic here
     
     await notifier.notify();
 
     console.log("Scheduled function ran");
-  };
+};
