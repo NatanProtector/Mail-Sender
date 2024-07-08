@@ -18,6 +18,7 @@ app.get(secret_url, (req,res) => {
 
 app.get('/wakeUp', (req,res) => {
     console.log('Waking up')
+    res.status(200).send("Waking up");
 });
 
 
